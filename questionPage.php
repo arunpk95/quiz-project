@@ -50,6 +50,7 @@ else
 			<i class="fas fa-bars"></i>
 		</label>
         <label class="logo">QuizUp</label>
+        <label class="logo" onclick="window.location.replace('index.php');">QuizUp</label>
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="overallscoreboard.php">Leaderboard</a></li>

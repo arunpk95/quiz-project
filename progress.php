@@ -36,7 +36,7 @@ else
 <html>
 
 <head>
-    <title></title>
+    <title>QuizUp</title>
     <link rel="stylesheet" type="text/css" href="progress.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -47,8 +47,8 @@ else
         <label for="check" class="checkbtn">
 			<i class="fas fa-bars"></i>
 		</label>
-        <label class="logo">QuizUp</label>
-        <ul>
+        <label class="logo" onclick="window.location.replace('index.php');">QuizUp</label>  
+<ul>
             
         <li><a href="index.php">Home</a></li>
             <li><a href="overallscoreboard.php">Leaderboard</a></li>
@@ -64,15 +64,16 @@ else
             if($row['score'] >= 8)
             {
                 
-            echo '<span class="pass" id="score">' . $row['score']. '/10</span>';
-            echo '<span class="pass">You have successfully passed the test. You are now certified in Programming Fundamentals.” Where ????????? is the certification topic you have chosen for this assignment.</span>';
+            echo '<span class="pass" id="score">' . $row['score']. '/10</span><br>';
+            echo '<span class="pass">You have successfully passed the test. <br>You are now certified in Programming Fundamentals.</span><br>';
+            echo '<img class="statusPic" src="img/congrats.gif"/>';
             
             } 
             else
             {
-                echo '<span class="retake" id="score">' . $row['score']; '/10</span>';
-                echo '<span class="retake">Unfortunately you did not pass the test. Please try again later!</span>';
-            
+                echo '<span class="retake" id="score">' . $row['score'].'/10</span><br>';
+                echo '<span class="retake">Unfortunately you did not pass the test. Please try again later!</span><br>';
+                echo '<img class="statusPic" src="img/sorry.gif"/>';
             }?>
         </div>
         <br><br>
@@ -80,7 +81,8 @@ else
             <p id="totQues">Total number of Questions : 10</p><br>
             <p id="quesAns">Total number of questions attempted:<?php echo $row['no_of_questions_answered'];?></p><br>
             <p id="correctAns">Total number of correct answers:<?php echo $row['correct_answers'];?></p><br>
-            <p id="wrongAns">Total number of wrong answers: <?php echo $row['wrong_answers'];?></p>
+            <p id="wrongAns">Total number of wrong answers: <?php echo $row['wrong_answers'];?></p><br>
+            <p>        <a href="overallscoreboard.php">Goto Leaderboard</a></p>
         </div>
         <br>
         <!-- <div class="tableResult">
@@ -101,7 +103,7 @@ else
         </div> -->
     </main>
     <aside>
-        <div class="content-main">
+        <!-- <div class="content-main">
             <div class="box">
                 <div class="percent">
                     <svg>
@@ -114,7 +116,7 @@ else
                 </div>
                 <h2 class="text">Progress</h2>
             </div>
-        </div>
+        </div> -->
     </aside>
     <script src="progress.js"></script>
 </body>

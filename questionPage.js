@@ -213,6 +213,7 @@ function submitAnswers() {
 function submitYes() {
     document.getElementById("submitDialog").classList.add('hidden');
     document.getElementById("okDialog").classList.remove('hidden');
+    store();
 }
 
 function submitNo() {
@@ -221,7 +222,7 @@ function submitNo() {
 
 function okDialog() {
     document.getElementById("okDialog").classList.add('hidden');
-    store();
+    gotoResult();
 }
 function store() {
     var xhttp = new XMLHttpRequest();
@@ -230,7 +231,7 @@ function store() {
         console.log(this.responseText);
         if(this.responseText == "success")
         {
-            gotoResult();
+         //   gotoResult();
         }
       }
     };

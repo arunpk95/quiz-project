@@ -4,6 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <title>Quiz Up</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="overallscoreboard.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -14,7 +15,7 @@
         <label for="check" class="checkbtn">
 			<i class="fas fa-bars"></i>
 		</label>
-        <label class="logo">Quiz Up</label>
+        <label class="logo" onclick="window.location.replace('index.php');">QuizUp</label>
         <ul><li><a href="index.php">Home</a></li>
             <li><a href="overallscoreboard.php" class="active">Leaderboard</a></li>
         </ul>

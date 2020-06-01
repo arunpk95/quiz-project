@@ -29,7 +29,7 @@ if (isset($_GET['email'])) {
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">QuizUp</label>
+        <label class="logo" onclick="window.location.replace('index.php');">QuizUp</label>
         <ul>
             <li><a href="index.php" class="active">Home</a></li>
             <li><a href="overallscoreboard.php">Leaderboard</a></li>
@@ -51,12 +51,18 @@ if (isset($_GET['email'])) {
             </div>
         </form>
         <div class="center">
-        <dl>
-            <dt>Please Note:</dt>
-            <dd>- You can take the quiz only once with a email</dd>
-            <dd>- You can switch between questions using the navigation in the right</dd>
-            <dd>- Every correct answer add up 1 point towards your score</dd> 
-        </dl>
+            <dl>
+                <dt>Please Note:</dt>
+                <dd>- You can take the quiz only once with an email</dd>
+                <dd>- You can switch between questions using the navigation in the right</dd>
+                <dd>- Every correct answer add up 1 point towards your score</dd>
+            </dl>
+            <figure>
+                <figcaption style="padding-top:40px;padding-bottom:20px">Listen to the Terms in Audio:</figcaption>
+                <audio controls src="voice.mp3">
+                    Your browser does not support the audio.
+                </audio>
+            </figure>
         </div>
 
     </div>

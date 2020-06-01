@@ -19,12 +19,13 @@ body {
     box-shadow: 1px 3px 5px #ffffffe5;
 }
 
-label.logo {
+label.logo{
     color: white;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 #topBar ul {
