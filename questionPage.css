@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 96%;
+    background: #f1f1f1;
+}
+
+h2 {
+    padding: 1em;
+}
+
+#questionNo {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 22px;
+    top: 12px;
+    position: relative;
+}
+
+header {
+    height: 15%;
+    border-bottom: 2px solid #ef9c00;
+}
+
+main {
+    height: 70%;
+    width: 75%;
+    float: left;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+aside {
+    width: 23%;
+    float: right;
+    margin-top: 50px;
+}
+
+footer {
+    clear: both;
+    height: 10%;
+    width: 100%;
+    border-top: 2px solid #ef9c00;
+}
+
+.buttonClass {
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    background-color: #3DCCCC;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+    margin: 5px;
+    left: 800px;
+    position: relative;
+}
+
+.btnOpDisabled {
+    background-color: grey;
+}
+
+.btnOp:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+.card {
+    display: inline-block;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15);
+    margin: 20px;
+    position: relative;
+    margin-bottom: 50px;
+    transition: all .2s ease-in-out;
+    width: 96%;
+    border-radius: 15px;
+}
+
+.card:hover {
+    /*box-shadow: 0 5px 22px 0 rgba(0,0,0,.25);*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin-bottom: 54px;
+}
+
+.text {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#question {
+    margin-top: 20px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+#optionDiv {
+    margin-top: 20px;
+    padding-left: 40px;
+    font-weight: bold;
+}
+
+#btnDiv {
+    float: left;
+}
+
+
+/*.radioClasso>input:active {
+    opacity: 1;
+    transform: scale(0);
+    transition: transform 0s, opacity 0s;
+}
+
+.radioClass {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.radioClass>input:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+.radioClass>input:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+}*/
+
+
+/*nav mennu*/
+
+#nav_menu {
+    padding: 10px;
+    margin: 36px;
+}
+
+#nav_menu ul {
+    list-style-type: none;
+}
+
+#nav_menu ul li {
+    float: left;
+    background-position: center;
+    transition: background 0.8s;
+}
+
+#nav_menu ul li a {
+    border: none;
+    border-radius: 2px;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    background-color: #3DCCCC;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+    margin: 5px;
+    display: block;
+}
+
+#nav_menu ul li a:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+#nav_menu ul li a.current {
+    background-color: lightgreen;
+    border: black;
+}
+
+#nav_menu ul li a.answered {
+    background-color: green;
+    border: black;
+}
+
+.dialog {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 10;
+    transition: all .5s;
+}
+
+.dialogContents {
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+.closeBar {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+.dialogBtn {
+    border: none;
+    border-radius: 2px;
+    padding: 10px 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: white;
+    background-color: #3DCCCC;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+    margin: 7px;
+    position: relative;
+    left: 190px
+}
+
+.dialogBtn:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+
+label,
+input {
+    width: 3%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
