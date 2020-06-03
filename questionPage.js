@@ -142,6 +142,7 @@ function hyperlinkCall(questionNo) {
     var x = document.getElementsByClassName("current")[0].id;
     document.getElementById(x).classList.remove('current');
     document.getElementById("questionLink" + (questionNo + 1)).classList.add('current');
+    btnVisibility();
 }
 
 function Question(question, rightAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3) {
@@ -183,6 +184,9 @@ function btnVisibility() {
         document.getElementById('prevBtn').disabled = true;
         document.getElementById("prevBtn").classList.remove('btnOp');
         document.getElementById("prevBtn").classList.add('btnOpDisabled');
+        document.getElementById('nextBtn').disabled = false;
+        document.getElementById("nextBtn").classList.remove('btnOpDisabled');
+        document.getElementById("nextBtn").classList.add('btnOp');
     } else if (currentQuestionNumber > 0 && currentQuestionNumber < 9) {
         document.getElementById('prevBtn').disabled = false;
         document.getElementById("prevBtn").classList.remove('btnOpDisabled');
@@ -194,6 +198,9 @@ function btnVisibility() {
         document.getElementById('nextBtn').disabled = true;
         document.getElementById("nextBtn").classList.remove('btnOp');
         document.getElementById("nextBtn").classList.add('btnOpDisabled');
+        document.getElementById('prevBtn').disabled = false;
+        document.getElementById("prevBtn").classList.remove('btnOpDisabled');
+        document.getElementById("prevBtn").classList.add('btnOp');
     }
 }
 

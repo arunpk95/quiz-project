@@ -75,7 +75,7 @@ if (isset($_GET['email'])) {
         <div class="center">
             <dl>
                 <dt>Please Note:</dt>
-                <dd>- You can take the quiz only once with an email</dd>
+                <dd>- You can take the one quiz only once with an email</dd>
                 <dd>- You can switch between questions using the navigation in the right</dd>
                 <dd>- Every correct answer add up 1 point towards your score</dd>
             </dl>
