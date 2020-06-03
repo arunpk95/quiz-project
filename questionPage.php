@@ -37,8 +37,10 @@ else
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="questionPage.css">
+    <title>Questions</title>
     <script>
         var id=<?php echo $id;?>;
         var topic = <?php echo "'".$topic."'";?>;
@@ -51,7 +53,6 @@ else
         <label for="check" class="checkbtn">
 			<i class="fas fa-bars"></i>
 		</label>
-        <label class="logo">QuizUp</label>
         <label class="logo" onclick="window.location.replace('index.php');">QuizUp</label>
         <ul>
             <li><a href="index.php">Home</a></li>

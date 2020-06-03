@@ -37,6 +37,7 @@ else
 
 <head>
     <title>QuizUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="progress.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -56,7 +57,6 @@ else
     </nav>
     <main>
         <span id="userName">Thank You, <?php echo $row['name'];?></span>
-        <br><br>
         <div class="scoreDiv">
             <p>Your result is :</p>
             <br>
@@ -76,7 +76,6 @@ else
                 echo '<img class="statusPic" src="img/sorry.gif"/>';
             }?>
         </div>
-        <br><br>
         <div class="resultDetails">
             <p id="totQues">Total number of Questions : 10</p><br>
             <p id="quesAns">Total number of questions attempted:<?php echo $row['no_of_questions_answered'];?></p><br>
@@ -85,39 +84,7 @@ else
             <p>        <a href="overallscoreboard.php">Goto Leaderboard</a></p>
         </div>
         <br>
-        <!-- <div class="tableResult">
-            <table>
-                <tr>
-                    <td id="cell1" class="resulltData">1</td>
-                    <td id="cell2" class="resulltData">2</td>
-                    <td id="cell3" class="resulltData">3</td>
-                    <td id="cell4" class="resulltData">4</td>
-                    <td id="cell5" class="resulltData">5</td>
-                    <td id="cell6" class="resulltData">6</td>
-                    <td id="cell7" class="resulltData">7</td>
-                    <td id="cell8" class="resulltData">8</td>
-                    <td id="cell9" class="resulltData">9</td>
-                    <td id="cell10" class="resulltData">10</td>
-                </tr>
-            </table>
-        </div> -->
     </main>
-    <aside>
-        <!-- <div class="content-main">
-            <div class="box">
-                <div class="percent">
-                    <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                    <div class="number">
-                        <h2>87<span>%</span></h2>
-                    </div>
-                </div>
-                <h2 class="text">Progress</h2>
-            </div>
-        </div> -->
-    </aside>
     <script src="progress.js"></script>
 </body>
 

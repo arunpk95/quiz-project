@@ -22,21 +22,29 @@ function navigateTable(direction) {
 }
 
 function createRows(start, end) {
+
     var tbl = document.getElementsByTagName("tbody")[0];
-    var i;
-    for (i = start; i < end; i++) {
+    if (data.length == 0) {
         row = tbl.insertRow();
-        row.insertCell(0).innerHTML = data[i].name;
-        row.insertCell(1).innerHTML = data[i].email;
-        row.insertCell(2).innerHTML = data[i].testDate;
-        row.insertCell(3).innerHTML = data[i].correctAnswer;
-        row.insertCell(4).innerHTML = data[i].wrongAnswer;
-        row.insertCell(5).innerHTML = data[i].score;
-        row.insertCell(6).innerHTML = data[i].topic;
+        var col = row.insertCell(0);
+        col.innerHTML = "No data found";
+        col.colSpan = "7";
+        col.style.textAlign = "center";
+    } else {
+        var i;
+        for (i = start; i < end; i++) {
+            row = tbl.insertRow();
+            row.insertCell(0).innerHTML = data[i].name;
+            row.insertCell(1).innerHTML = data[i].email;
+            row.insertCell(2).innerHTML = data[i].testDate;
+            row.insertCell(3).innerHTML = data[i].correctAnswer;
+            row.insertCell(4).innerHTML = data[i].wrongAnswer;
+            row.insertCell(5).innerHTML = data[i].score;
+            row.insertCell(6).innerHTML = data[i].topic;
+        }
     }
     document.getElementById("currentPageNumber").innerHTML = currentPageNumber;
 }
-
 function clearRows() {
     var tbl = document.getElementsByTagName("tbody")[0];
     while (tbl.rows.length > 0) {
@@ -60,7 +68,6 @@ function updateBoundaries(direction) {
     } else {
         if(data.length==0)
         {
-            alert("Sorry, No records found.");
         }
         else{
             alert("Sorry. No more " + direction + " navigation");
