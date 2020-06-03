@@ -4,8 +4,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <title>Quiz Up</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="overallscoreboard.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/overallscoreboard.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
@@ -71,7 +71,7 @@
             </tfoot>
         </table>
     </div>
-    <script src="overallscoreboard.js"></script>
+    <script src="js/overallscoreboard.js"></script>
 </body>
 
 </html>

@@ -111,26 +111,6 @@ footer {
 }
 
 
-/*.radioClasso>input:active {
-    opacity: 1;
-    transform: scale(0);
-    transition: transform 0s, opacity 0s;
-}
-
-.radioClass {
-    background-position: center;
-    transition: background 0.8s;
-}
-
-.radioClass>input:hover {
-    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
-}
-
-.radioClass>input:active {
-    background-color: #6eb9f7;
-    background-size: 100%;
-    transition: background 0s;
-}*/
 
 
 /*nav mennu*/
@@ -238,4 +218,8 @@ input {
     box-sizing: border-box;
     justify-content: space-between;
     font-size: 1.1rem;
+}
+xmp
+{
+    display:inline;
 }

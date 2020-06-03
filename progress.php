@@ -38,8 +38,8 @@ else
 <head>
     <title>QuizUp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="progress.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/progress.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -81,7 +81,7 @@ else
             <p id="quesAns">Total number of questions attempted:<?php echo $row['no_of_questions_answered'];?></p><br>
             <p id="correctAns">Total number of correct answers:<?php echo $row['correct_answers'];?></p><br>
             <p id="wrongAns">Total number of wrong answers: <?php echo $row['wrong_answers'];?></p><br>
-            <p>        <a href="overallscoreboard.php">Goto Leaderboard</a></p>
+            <p>        <a href="js/overallscoreboard.php">Goto Leaderboard</a></p>
         </div>
         <br>
     </main>

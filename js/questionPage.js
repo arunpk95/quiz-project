@@ -1,6 +1,6 @@
 //variables
 var questionArray = [];
-if(topic=="MYSQL")
+if(topic=="MySQL")
 {
     questionArray[0] = new Question("Character data can be stored as?", "Either Fixed or Variable length string", "Fixed length string", "Variable length string", "None of the mentioned");
     questionArray[1] =new Question("Which declaration represents that “character data will consume the same number of bytes as declared and is right padded”?", "Char", "Varchar", "Both Char and Varchar", "None of the mentioned");
@@ -26,9 +26,9 @@ if(topic=="MYSQL")
 else if(topic == "HTML")
 {
     questionArray[0] = new Question("What does HTML stands for?", "Hypertext Markup Language.", "Hypertext and links markup language.", "Hypertext Machine language.", "Hightext machine language.");
-    questionArray[1] = new Question("How is document type initialized in HTML5.?", "<!DOCTYPE HTML>", "</DOCTYPE HTML>", "</DOCTYPE>", "</DOCTYPE html>");
-    questionArray[2] = new Question("Which of the following HTML Elements is used for making any text bold ?", "<b>", "<p>", "<i>", "<li>");
-    questionArray[3] = new Question("Which of the following HTML element is used for creating an unordered list?", "<ul>", "<ui>", "<i>", "<em>");
+    questionArray[1] = new Question("How is document type initialized in HTML5.?", "<xmp><!DOCTYPE HTML></xmp>", "<xmp></DOCTYPE HTML></xmp>", "<xmp></DOCTYPE></xmp>", "<xmp></DOCTYPE html></xmp>");
+    questionArray[2] = new Question("Which of the following HTML Elements is used for making any text bold ?", "<xmp><b></xmp>", "<xmp><p></xmp>", "<xmp><i></xmp>", "<xmp><li></xmp>");
+    questionArray[3] = new Question("Which of the following HTML element is used for creating an unordered list?", "<xmp><ul></xmp>", "<xmp><ui></xmp>", "<xmp><i></xmp>", "<xmp><em></xmp>");
     questionArray[4] = new Question("Which of the following characters indicate closing of a tag?", "/", ".", "?", "!");
     questionArray[5] = new Question("What is the font-size of the h1 heading tag?", "2 em", "3.5 em", "2.17 em", "1.5 em");
     questionArray[6] = new Question("How many heading tags are there in HTML5?", "6", "5", "3", "2");
@@ -36,14 +36,14 @@ else if(topic == "HTML")
     questionArray[8] = new Question("Which of the following attributes is used to add link to any element?", "href", "ref", "link", "newref");
     questionArray[9] = new Question("How can you make a list that lists the items with numbers?", "ol", "ul", "dl", "lol")
     questionArray[10] = new Question("What is the purpose of using div tags in HTML?", "For creating different sections.", "For creating Different styles.", "For adding headings.", "For adding titles.");
-    questionArray[11] = new Question("Which of the following tags is used to make a portion of text italic in HTML?", "<i>", "<italic>", "<style= “i”>", "<style=“italic”>");
-    questionArray[12] = new Question("Which of the following tags is used to add a line-break in HTML?", "<br>", "<break>", "</break>", "</br>");
+    questionArray[11] = new Question("Which of the following tags is used to make a portion of text italic in HTML?", "<xmp><i></xmp>", "<xmp><italic></xmp>", "<xmp><style= “i”></xmp>", "<xmp><style=“italic”></xmp>");
+    questionArray[12] = new Question("Which of the following tags is used to add a line-break in HTML?", "<xmp><br></xmp>", "<xmp><break></xmp>", "<xmp></break></xmp>", "<xmp></br></xmp>");
     questionArray[13] = new Question("Which of the following attributes is used to open an hyperlink in new tab?", "target", "href", "tab", "ref");
-    questionArray[14] = new Question("Which of the following is the correct way to add background color in HTML?", "<body style = “background-color: green;”>", "<body style = “background-color=green”>", "<body bg-color = “green”>", "<body color = “green”>");
+    questionArray[14] = new Question("Which of the following is the correct way to add background color in HTML?", "<xmp><body style = “background-color: green;”></xmp>", "<xmp><body style = “background-color=green”></xmp>", "<xmp><body bg-color = “green”></xmp>", "<xmp><body color = “green”></xmp>");
     questionArray[15] = new Question("What is the correct sequence of HTML tags for starting a webpage?", "HTML,Head,Title", "Head,Title,HTML", "Title,Head,HTML", "HTML,Title,Head");
-    questionArray[16] = new Question("Which tag is used for creating a drop-down selection list?", "<option>", "<select>", "<dropdown>", "<list>");
-    questionArray[17] = new Question("Which tag is used to add an header in HTML5 table?", "<th>", "<theader>", "<h1>", "<header>");
-    questionArray[18] = new Question("Which of the following elements can be used in HTML to create a table?", "<table> , <tbody> , <tr>", "<table> , <tbody> , <trow>", "<table> , <tb> , <trow>", "<table>,<tr>");
+    questionArray[16] = new Question("Which tag is used for creating a drop-down selection list?", "<xmp><option></xmp>", "<xmp><select></xmp>", "<xmp><dropdown></xmp>", "<xmp><list></xmp>");
+    questionArray[17] = new Question("Which tag is used to add an header in HTML5 table?", "<xmp><th></xmp>", "<xmp><theader></xmp>", "<xmp><h1></xmp>", "<xmp><header></xmp>");
+    questionArray[18] = new Question("Which of the following elements can be used in HTML to create a table?", "<xmp><table> , <tbody> , <tr></xmp>", "<xmp><table> , <tbody> , <trow></xmp>", "<xmp><table> , <tb> , <trow></xmp>", "<xmp><table>,<tr></xmp>");
     questionArray[19] = new Question("Who is making the Web Standards?", "The World  Web Consortium", "Apple", "Mozilla", "Microsoft");}
 else{
     questionArray[0] = new Question("Which of the following statement mentions the right ways to concatenate the two strings?","Str1.concat(Str2) and Str1 + Str2.","None of these.","Str1.substring(Str2) and Str1 && Str2.","Str1.append(Str2) and Str1 + Str2.");

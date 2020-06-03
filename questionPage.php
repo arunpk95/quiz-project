@@ -38,8 +38,8 @@ else
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="questionPage.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/questionPage.css">
     <title>Questions</title>
     <script>
         var id=<?php echo $id;?>;
@@ -132,7 +132,7 @@ else
             <button id="ok" class="dialogBtn" onclick="okDialog()">OK</button>
         </div>
     </div>
-    <script src=" questionPage.js "></script>
+    <script src="js/questionPage.js "></script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@ if (isset($_GET['email'])) {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <title>Quiz Up</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <?php if (isset($_GET['email'])) {
         echo "<script type='text/javascript'>alert('Sorry, This email is already used for the selected Quiz.');</script>";
@@ -81,7 +81,7 @@ if (isset($_GET['email'])) {
             </dl>
             <figure>
                 <figcaption style="padding-top:40px;padding-bottom:20px">Listen to the Terms in Audio:</figcaption>
-                <audio controls src="voice.mp3">
+                <audio controls src="media/voice.mp3">
                     Your browser does not support the audio.
                 </audio>
             </figure>
