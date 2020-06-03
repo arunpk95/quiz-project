@@ -9,10 +9,10 @@ function init() {
     data = fetchScores();
     currentPageNumber = 0;
     recordsPerPage = document.getElementById('recordsPerPage').value;
+    document.getElementById("totalRecord").innerHTML = "Total Records : " + data.length;
     countTotalPage();
     updateBoundaries('right');
     createRows(start, end);
-    document.getElementById("totalRecord").innerHTML = "Total Records : " + data.length;
 }
 init();
 
@@ -32,6 +32,7 @@ function createRows(start, end) {
         row.insertCell(3).innerHTML = data[i].correctAnswer;
         row.insertCell(4).innerHTML = data[i].wrongAnswer;
         row.insertCell(5).innerHTML = data[i].score;
+        row.insertCell(6).innerHTML = data[i].topic;
     }
     document.getElementById("currentPageNumber").innerHTML = currentPageNumber;
 }
@@ -57,7 +58,13 @@ function updateBoundaries(direction) {
         end = recordsPerPage * currentPageNumber;
         start = end - recordsPerPage;
     } else {
-        alert("Sorry. No more " + direction + " navigation");
+        if(data.length==0)
+        {
+            alert("Sorry, No records found.");
+        }
+        else{
+            alert("Sorry. No more " + direction + " navigation");
+        }
     }
 }
 
@@ -94,7 +101,7 @@ function rightOut(element) {
 function fetchScores()
 {
   var xhttp = new XMLHttpRequest();
-  xhttp.open("GET", "fetchScores.php", false);
+  xhttp.open("GET", "fetchScores.php?MySQL="+document.getElementById("MySQL").checked+"&Java="+document.getElementById("Java").checked+"&HTML="+document.getElementById("HTML").checked, false);
   xhttp.send();
   return JSON.parse(xhttp.responseText);
 }

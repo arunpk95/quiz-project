@@ -9,7 +9,6 @@ if (isset($_GET['email'])) {
 }
 
 ?>
-
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +18,7 @@ if (isset($_GET['email'])) {
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <?php if (isset($_GET['email'])) {
-        echo "<script type='text/javascript'>alert('Sorry, This email is already used.');</script>";
+        echo "<script type='text/javascript'>alert('Sorry, This email is already used for the selected Quiz.');</script>";
     } ?>
 </head>
 
@@ -45,6 +44,29 @@ if (isset($_GET['email'])) {
                 <label for="email-input">Email</label>
                 <input type="email" name="email-input" id="email-input" placeholder="example@mail.com" value=<?php echo '"' . $email . '"'; ?> required />
             </div>
+            <label style="padding-left: 110px;">Select Quiz</label>
+            <div class="testCategory">
+                <table>
+                    <tr>
+                        <td>
+                            <div id="js" class="divSquare selectedDiv" onclick="divClick(1)">
+                                <p>MySQL</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="html" class="divSquare fadeUnselected" onclick="divClick(2)">
+                                <p>html</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div id="java" class="divSquare fadeUnselected" onclick="divClick(3)">
+                                <p>java</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <input type="text" value="MySQL" name="topic" id="topic" style="display:none"/>
             <div class="form-field">
                 <label for=""></label>
                 <input type="submit" name="submit-signup" id="submit-signup" value="Take Quiz" />
@@ -66,7 +88,30 @@ if (isset($_GET['email'])) {
         </div>
 
     </div>
-
+    <script>
+        function divClick(topic) {
+            var topicSelected = topic;
+            if (topic == 1) {
+                document.getElementById("js").classList.remove('fadeUnselected');
+                document.getElementById("js").classList.add('selectedDiv');
+                document.getElementById("html").classList.add('fadeUnselected');
+                document.getElementById("java").classList.add('fadeUnselected');
+                document.getElementById("topic").value="MySQL";
+            } else if (topic == 2) {
+                document.getElementById("js").classList.add('fadeUnselected');
+                document.getElementById("html").classList.remove('fadeUnselected');
+                document.getElementById("html").classList.add('selectedDiv');
+                document.getElementById("java").classList.add('fadeUnselected');
+                document.getElementById("topic").value="HTML";
+            } else if (topic == 3) {
+                document.getElementById("js").classList.add('fadeUnselected');
+                document.getElementById("html").classList.add('fadeUnselected');
+                document.getElementById("java").classList.remove('fadeUnselected');
+                document.getElementById("java").classList.add('selectedDiv');
+                document.getElementById("topic").value="Java";
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -1,25 +1,73 @@
 //variables
 var questionArray = [];
-questionArray[0] = new Question("What is a?", "25", "24", "23");
-questionArray[1] = new Question("What is b?", "Red", "White", "Green");
-questionArray[2] = new Question("What is c?", "Green", "White", "Red");
-questionArray[3] = new Question("What is d?", "8", "6", "4");
-questionArray[4] = new Question("What is e?", "Willem-Alexander", "Willem-Alexzelf", "Willem-Alexniemand");
-questionArray[5] = new Question("What is f?", "0", "2", "4");
-questionArray[6] = new Question("What is g?", "Artist", "Baker", "Jobless");
-questionArray[7] = new Question("What is h?", "25", "24", "23");
-questionArray[8] = new Question("What is i?", "Red", "White", "Green");
-questionArray[9] = new Question("What is j?", "Green", "White", "Red");
-questionArray[10] = new Question("What is k?", "8", "6", "4");
-questionArray[11] = new Question("What is l?", "Willem-Alexander", "Willem-Alexzelf", "Willem-Alexniemand");
-questionArray[12] = new Question("What is m?", "0", "2", "4");
-questionArray[13] = new Question("What is n?", "Artist", "Baker", "Jobless");
-questionArray[14] = new Question("What is o?", "25", "24", "23");
-questionArray[15] = new Question("What is p?", "Red", "White", "Green");
-questionArray[16] = new Question("What is q?", "Green", "White", "Red");
-questionArray[17] = new Question("What is r?", "8", "6", "4");
-questionArray[18] = new Question("What is s?", "Willem-Alexander", "Willem-Alexzelf", "Willem-Alexniemand");
-questionArray[19] = new Question("What is t?", "0", "2", "4");
+if(topic=="MYSQL")
+{
+    questionArray[0] = new Question("Character data can be stored as?", "Either Fixed or Variable length string", "Fixed length string", "Variable length string", "None of the mentioned");
+    questionArray[1] =new Question("Which declaration represents that “character data will consume the same number of bytes as declared and is right padded”?", "Char", "Varchar", "Both Char and Varchar", "None of the mentioned");
+    questionArray[2] = new Question("Which declaration doesn’t use the same number of bytes and consumption of bytes depends on the input data?", "Varchar", "Char", "Both varchar and char", "None of the mentioned");
+    questionArray[3] = new Question("The maximum length of the char columns is ____________", "255 bytes", "65,535 bytes", "256 bytes", "None of the mentioned");
+    questionArray[4] = new Question("The maximum length of the varcher columns is ____________", "Upto 65,535 bytes", "Upto 256 bytes", "unto 65,567 bytes", "None of the mentioned");
+    questionArray[5] = new Question("In oracle database variable length column is declared by ___________", " Varchar2", "Varchar", "Varchar3", "None of the mentioned");
+    questionArray[6] = new Question("Mysql support different character sets, which command is used to display all character sets?", "SHOW CHARACTER SET;", "SHOW;", "CHARACTER SET;", "None of the mentioned.");
+    questionArray[7] = new Question("Which one is the correct declaration for choosing the character set other than default?", "Varchar(20) character set utf8", "Varchar(20)", "Varchar(20) character set;", "None of the mentioned");
+    questionArray[8] = new Question("Which “text type” has the maximum number of bytes?", "Long Text", "Tiny text", "Text", "Medium Text");
+    questionArray[9] = new Question("Which among the following have the maximum bytes?", "Tect type", "Char", "Varchar", "Both Varchar and Char");
+    questionArray[10] = new Question("Which program copies the databases from one server to another?", "Mysqldbcopy", "Mysqlcopydb", "Mysqlflushdb", "Mysqldbflush");
+    questionArray[11] = new Question("To use ‘mysqldbcopy’, which privileges are required on the source server ?", "SELECT", "CREATE", "INSERT", "UPDATE");
+    questionArray[12] = new Question("The function ‘fetchrow_hashref()’ returns reference to hash of row values keyed by _________?", "Column Name", "Row Name", "Table Name", "Database Name");
+    questionArray[13] = new Question("Which function returns reference to array of rows values ?", "Fetchrow_arrayref()", "Fetchrow_hashref()", "Fetchrow_array()", "Fetch()");
+    questionArray[14] = new Question("Which is the log, in which data changes received from a replication master server are written?", "Relay Log", "Error Log", "Binary Log", "General Query Log");
+    questionArray[15] = new Question("The “father” of MYSQL is _____________", "Michael Widenius", "Bill Joy", "Bill Gates", "Stephanie Wall");
+    questionArray[16] = new Question("The Main Mysql program that does all the data handling is called", "Mysqld", "Mysql", "Mysql.exe", "Httpd");
+    questionArray[17] = new Question("Which of these is a valid call to a function (watch the spaces carefully!)", "CONCAT(“A”,”B”)", "CONCAT(A+B)", "CONCAT(A,B)", "CONCAT (A B)");
+    questionArray[18] = new Question("If you want to undo a GRANT, you should use", "REVOKE", "UNDO", "UNGRANT", "DELETE");
+    questionArray[19] = new Question("Which of these is not a valid name for a column", "From", "To", "Far", "Near");    
+}
+else if(topic == "HTML")
+{
+    questionArray[0] = new Question("Character data can be stored as?", "Either Fixed or Variable length string", "Fixed length string", "Variable length string", "None of the mentioned");
+    questionArray[1] =new Question("Which declaration represents that “character data will consume the same number of bytes as declared and is right padded”?", "Char", "Varchar", "Both Char and Varchar", "None of the mentioned");
+    questionArray[2] = new Question("Which declaration doesn’t use the same number of bytes and consumption of bytes depends on the input data?", "Varchar", "Char", "Both varchar and char", "None of the mentioned");
+    questionArray[3] = new Question("The maximum length of the char columns is ____________", "255 bytes", "65,535 bytes", "256 bytes", "None of the mentioned");
+    questionArray[4] = new Question("The maximum length of the varcher columns is ____________", "Upto 65,535 bytes", "Upto 256 bytes", "unto 65,567 bytes", "None of the mentioned");
+    questionArray[5] = new Question("In oracle database variable length column is declared by ___________", " Varchar2", "Varchar", "Varchar3", "None of the mentioned");
+    questionArray[6] = new Question("Mysql support different character sets, which command is used to display all character sets?", "SHOW CHARACTER SET;", "SHOW;", "CHARACTER SET;", "None of the mentioned.");
+    questionArray[7] = new Question("Which one is the correct declaration for choosing the character set other than default?", "Varchar(20) character set utf8", "Varchar(20)", "Varchar(20) character set;", "None of the mentioned");
+    questionArray[8] = new Question("Which “text type” has the maximum number of bytes?", "Long Text", "Tiny text", "Text", "Medium Text");
+    questionArray[9] = new Question("Which among the following have the maximum bytes?", "Tect type", "Char", "Varchar", "Both Varchar and Char");
+    questionArray[10] = new Question("Which program copies the databases from one server to another?", "Mysqldbcopy", "Mysqlcopydb", "Mysqlflushdb", "Mysqldbflush");
+    questionArray[11] = new Question("To use ‘mysqldbcopy’, which privileges are required on the source server ?", "SELECT", "CREATE", "INSERT", "UPDATE");
+    questionArray[12] = new Question("The function ‘fetchrow_hashref()’ returns reference to hash of row values keyed by _________?", "Column Name", "Row Name", "Table Name", "Database Name");
+    questionArray[13] = new Question("Which function returns reference to array of rows values ?", "Fetchrow_arrayref()", "Fetchrow_hashref()", "Fetchrow_array()", "Fetch()");
+    questionArray[14] = new Question("Which is the log, in which data changes received from a replication master server are written?", "Relay Log", "Error Log", "Binary Log", "General Query Log");
+    questionArray[15] = new Question("The “father” of MYSQL is _____________", "Michael Widenius", "Bill Joy", "Bill Gates", "Stephanie Wall");
+    questionArray[16] = new Question("The Main Mysql program that does all the data handling is called", "Mysqld", "Mysql", "Mysql.exe", "Httpd");
+    questionArray[17] = new Question("Which of these is a valid call to a function (watch the spaces carefully!)", "CONCAT(“A”,”B”)", "CONCAT(A+B)", "CONCAT(A,B)", "CONCAT (A B)");
+    questionArray[18] = new Question("If you want to undo a GRANT, you should use", "REVOKE", "UNDO", "UNGRANT", "DELETE");
+    questionArray[19] = new Question("Which of these is not a valid name for a column", "From", "To", "Far", "Near");  
+}
+else{
+    questionArray[0] = new Question("Character data can be stored as?", "Either Fixed or Variable length string", "Fixed length string", "Variable length string", "None of the mentioned");
+    questionArray[1] =new Question("Which declaration represents that “character data will consume the same number of bytes as declared and is right padded”?", "Char", "Varchar", "Both Char and Varchar", "None of the mentioned");
+    questionArray[2] = new Question("Which declaration doesn’t use the same number of bytes and consumption of bytes depends on the input data?", "Varchar", "Char", "Both varchar and char", "None of the mentioned");
+    questionArray[3] = new Question("The maximum length of the char columns is ____________", "255 bytes", "65,535 bytes", "256 bytes", "None of the mentioned");
+    questionArray[4] = new Question("The maximum length of the varcher columns is ____________", "Upto 65,535 bytes", "Upto 256 bytes", "unto 65,567 bytes", "None of the mentioned");
+    questionArray[5] = new Question("In oracle database variable length column is declared by ___________", " Varchar2", "Varchar", "Varchar3", "None of the mentioned");
+    questionArray[6] = new Question("Mysql support different character sets, which command is used to display all character sets?", "SHOW CHARACTER SET;", "SHOW;", "CHARACTER SET;", "None of the mentioned.");
+    questionArray[7] = new Question("Which one is the correct declaration for choosing the character set other than default?", "Varchar(20) character set utf8", "Varchar(20)", "Varchar(20) character set;", "None of the mentioned");
+    questionArray[8] = new Question("Which “text type” has the maximum number of bytes?", "Long Text", "Tiny text", "Text", "Medium Text");
+    questionArray[9] = new Question("Which among the following have the maximum bytes?", "Tect type", "Char", "Varchar", "Both Varchar and Char");
+    questionArray[10] = new Question("Which program copies the databases from one server to another?", "Mysqldbcopy", "Mysqlcopydb", "Mysqlflushdb", "Mysqldbflush");
+    questionArray[11] = new Question("To use ‘mysqldbcopy’, which privileges are required on the source server ?", "SELECT", "CREATE", "INSERT", "UPDATE");
+    questionArray[12] = new Question("The function ‘fetchrow_hashref()’ returns reference to hash of row values keyed by _________?", "Column Name", "Row Name", "Table Name", "Database Name");
+    questionArray[13] = new Question("Which function returns reference to array of rows values ?", "Fetchrow_arrayref()", "Fetchrow_hashref()", "Fetchrow_array()", "Fetch()");
+    questionArray[14] = new Question("Which is the log, in which data changes received from a replication master server are written?", "Relay Log", "Error Log", "Binary Log", "General Query Log");
+    questionArray[15] = new Question("The “father” of MYSQL is _____________", "Michael Widenius", "Bill Joy", "Bill Gates", "Stephanie Wall");
+    questionArray[16] = new Question("The Main Mysql program that does all the data handling is called", "Mysqld", "Mysql", "Mysql.exe", "Httpd");
+    questionArray[17] = new Question("Which of these is a valid call to a function (watch the spaces carefully!)", "CONCAT(“A”,”B”)", "CONCAT(A+B)", "CONCAT(A,B)", "CONCAT (A B)");
+    questionArray[18] = new Question("If you want to undo a GRANT, you should use", "REVOKE", "UNDO", "UNGRANT", "DELETE");
+    questionArray[19] = new Question("Which of these is not a valid name for a column", "From", "To", "Far", "Near");  
+}
 
 var currentScore = 0;
 var options = [];
@@ -54,7 +102,7 @@ function selectQuestion() {
 function formQuestion() {
     for (var i = 0; i < questionNoForDisplay.length; i++) {
         questionForDisplay = questionArray[questionNoForDisplay[i]];
-        options = [questionForDisplay.rightAnswer, questionForDisplay.wrongAnswer1, questionForDisplay.wrongAnswer2];
+        options = [questionForDisplay.rightAnswer, questionForDisplay.wrongAnswer1, questionForDisplay.wrongAnswer2,questionForDisplay.wrongAnswer2];
         rightAns.push(questionForDisplay.rightAnswer);
         shuffle(options);
         var finalDispQuestion = {};
@@ -62,6 +110,7 @@ function formQuestion() {
         finalDispQuestion.chOne = options[0];
         finalDispQuestion.chTwo = options[1];
         finalDispQuestion.chThree = options[2];
+        finalDispQuestion.chFour = options[3];
         finalDispQuestion.selected = 0;
         finalQuestionArray.push(finalDispQuestion);
     }
@@ -78,6 +127,8 @@ function displayQuestion(questionNo) {
     document.getElementById("option2").innerHTML = a.chTwo;
     document.getElementById("radio3").value = a.chThree;
     document.getElementById("option3").innerHTML = a.chThree;
+    document.getElementById("radio4").value = a.chFour;
+    document.getElementById("option4").innerHTML = a.chFour;
     if (a.selected != 0) {
         document.getElementById("radio" + a.selected).checked = true;
     }
@@ -87,17 +138,19 @@ function hyperlinkCall(questionNo) {
     document.getElementById("radio1").checked = false;
     document.getElementById("radio2").checked = false;
     document.getElementById("radio3").checked = false;
+    document.getElementById("radio4").checked = false;
     displayQuestion(questionNo);
     var x = document.getElementsByClassName("current")[0].id;
     document.getElementById(x).classList.remove('current');
     document.getElementById("questionLink" + (questionNo + 1)).classList.add('current');
 }
 
-function Question(question, rightAnswer, wrongAnswer1, wrongAnswer2, selected) {
+function Question(question, rightAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3) {
     this.question = question;
     this.rightAnswer = rightAnswer;
     this.wrongAnswer1 = wrongAnswer1;
     this.wrongAnswer2 = wrongAnswer2;
+    this.wrongAnswer3 = wrongAnswer3;
 };
 
 function prevQuestion() {
@@ -107,6 +160,7 @@ function prevQuestion() {
         document.getElementById("radio1").checked = false;
         document.getElementById("radio2").checked = false;
         document.getElementById("radio3").checked = false;
+        document.getElementById("radio4").checked = false;
         displayQuestion(currentQuestionNumber - 1);
     }
     btnVisibility();
@@ -117,6 +171,7 @@ function nextQuestion() {
         document.getElementById("radio1").checked = false;
         document.getElementById("radio2").checked = false;
         document.getElementById("radio3").checked = false;
+        document.getElementById("radio4").checked = false;
         displayQuestion(currentQuestionNumber + 1);
         document.getElementById("questionLink" + (currentQuestionNumber)).classList.remove('current');
         document.getElementById("questionLink" + (currentQuestionNumber + 1)).classList.add('current');
@@ -159,6 +214,12 @@ function optionTwoSelected() {
 function optionThreeSelected() {
     var ans = document.getElementById("radio3").value;
     finalQuestionArray[currentQuestionNumber].selected = 3;
+    checkAnswer(ans);
+}
+
+function optionFourSelected() {
+    var ans = document.getElementById("radio4").value;
+    finalQuestionArray[currentQuestionNumber].selected = 4;
     checkAnswer(ans);
 }
 
@@ -224,22 +285,22 @@ function okDialog() {
     document.getElementById("okDialog").classList.add('hidden');
     gotoResult();
 }
+
 function store() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        console.log(this.responseText);
-        if(this.responseText == "success")
-        {
-         //   gotoResult();
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+            if (this.responseText == "success") {
+                //   gotoResult();
+            }
         }
-      }
     };
     xhttp.open("POST", "updateResult.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("id="+id+"&correctAnswered="+correctlyAnswered.length+"&wrongAnswered="+wrongAnswered.length);
+    xhttp.send("id=" + id + "&correctAnswered=" + correctlyAnswered.length + "&wrongAnswered=" + wrongAnswered.length);
 }
 
 function gotoResult() {
-    window.location.href = "progress.php?id="+id;
+    window.location.href = "progress.php?id=" + id;
 }

@@ -3,7 +3,8 @@ if(isset($_POST['submit-signup']))
 {
     $name = $_POST['full-name'];
     $email = $_POST['email-input']; 
-    $sql = "insert into participants (email,name) VALUES ('".$email."','".$name."')";
+    $topic = $_POST['topic'];
+    $sql = "insert into participants (email,name,topic) VALUES ('".$email."','".$name."','".$topic."')";
     
     $servername = "localhost";
     $username = "root";
@@ -32,14 +33,15 @@ else
     die();
 }
 ?>
-
+<!DOCTYPE html>
 <html>
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="questionPage.css">
     <script>
-        id=<?php echo $id?>;
+        var id=<?php echo $id;?>;
+        var topic = <?php echo "'".$topic."'";?>;
     </script>
 </head>
 
@@ -81,10 +83,10 @@ else
                     </label>
                     <br />
                     <br />
-                    <!--<label class="radioClass">
-                        <input type="radio" name="group">
-                        <span id="option4">Radio Option 4</span>
-                    </label> -->
+                    <label class="radioClass">
+                        <input type="radio" id="radio4" name="group" onclick="optionFourSelected()">
+                        <span id="option4"></span>
+                    </label>
                 </div>
             </div>
         </div>
